@@ -31,14 +31,11 @@
                 android:checked="true"
                 android:background="@drawable/toggle_background"
                 />
-
-
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/switch_elemento"
                 />
-
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
