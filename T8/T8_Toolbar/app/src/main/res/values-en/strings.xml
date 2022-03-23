@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">T8_Toolbar</string>
+    <string name="opcion1">Option 1</string>
+    <string name="opcion2">Option 2</string>
+    <string name="opcion3">Option 3</string>
+    <string name="opcion4">Option 4</string>
+</resources>

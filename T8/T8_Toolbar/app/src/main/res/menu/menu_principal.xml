@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_opcion_1"
+        android:icon="@drawable/account"
+        android:title="@string/opcion1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_opcion_2"
+        android:icon="@drawable/account"
+        android:title="@string/opcion2"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_opcion_3"
+        android:icon="@drawable/account"
+        android:title="@string/opcion3"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_opcion_4"
+        android:title="@string/opcion4"
+        />
+
+
+    <item android:title="Elementos">
+
+        <menu>
+            <item
+                android:id="@+id/menu_opcion_5"
+                android:title="Opcion 5" />
+            <item
+                android:id="@+id/menu_opcion_6"
+                android:title="Opcion 6" />
+            <item
+                android:id="@+id/menu_opcion_7"
+                android:title="Opcion 7" />
+        </menu>
+
+    </item>
+
+</menu>
