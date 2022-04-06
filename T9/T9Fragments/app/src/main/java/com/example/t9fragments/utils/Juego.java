@@ -1,6 +1,8 @@
 package com.example.t9fragments.utils;
 
-public class Juego {
+import java.io.Serializable;
+
+public class Juego implements Serializable {
 
     private String nombre, desarrollador;
 

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("desarrollador", "EA");
+                intent.putExtra("desarrollador", "Activision");
                 startActivity(intent);
             }
         });

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -24,10 +25,13 @@ public class FragmentLista extends Fragment {
     private ListView lista;
     private ArrayAdapter<Juego> adaptadorJuegos;
     private ArrayList<Juego> listaJuegos, listaFiltrada;
+    // 2º PASO: CREO UN OBJETO DE LA INTERFAZ y LO IGUAL AL CONTEXTO
+    private OnFragmentJuegoListener listener;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+        listener = (OnFragmentJuegoListener) context;
         listaJuegos = new ArrayList();
         listaFiltrada = new ArrayList<>();
         listaJuegos.add(new Juego("FFX","Squareix"));
@@ -84,5 +88,18 @@ public class FragmentLista extends Fragment {
         super.onStart();
         lista = view.findViewById(R.id.lista_fragment);
         lista.setAdapter(adaptadorJuegos);
+        // 4o PASO: REALIZA LA COMUNICACION CUANDO QUIERAS
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Juego juego = adaptadorJuegos.getItem(i);
+                listener.onJuegoSelected(juego);
+            }
+        });
+    }
+
+    // 1ER PASO: CREO UNA INTERFAZ CON UN MËTODO
+    public interface OnFragmentJuegoListener{
+        void onJuegoSelected(Juego juego);
     }
 }
