@@ -18,12 +18,14 @@ import java.util.ArrayList;
 
 public class AdaptadorXBOX extends RecyclerView.Adapter<AdaptadorXBOX.MyHolder>{
 
-    Context context;
-    ArrayList<Juego> listaJuegos;
+    private Context context;
+    private ArrayList<Juego> listaJuegos;
+    private OnXBOXListener listener;
 
     public AdaptadorXBOX(Context context, ArrayList<Juego> listaJuegos) {
         this.context = context;
         this.listaJuegos = listaJuegos;
+        listener = (OnXBOXListener) context;
     }
 
     @NonNull
@@ -40,12 +42,22 @@ public class AdaptadorXBOX extends RecyclerView.Adapter<AdaptadorXBOX.MyHolder>{
         Juego juego = listaJuegos.get(position);
         holder.texto.setText(juego.getNombre());
         holder.imagen.setImageResource(juego.getImagen());
+        holder.imagen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onJuegoXBOXSelected(juego);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         // cuantos a pintar
         return listaJuegos.size();
+    }
+
+    public interface OnXBOXListener{
+        void onJuegoXBOXSelected(Juego juego);
     }
 
     class MyHolder extends RecyclerView.ViewHolder{

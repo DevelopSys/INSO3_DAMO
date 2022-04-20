@@ -59,5 +59,6 @@ public class FragmentDos extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adaptadorXBOX);
 
+
     }
 }
