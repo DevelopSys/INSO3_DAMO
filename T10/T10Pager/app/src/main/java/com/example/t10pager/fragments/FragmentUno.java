@@ -14,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.t10pager.R;
+import com.example.t10pager.adaptadores.AdaptadorListView;
+
+import java.util.ArrayList;
 
 
 public class FragmentUno extends Fragment {
@@ -22,12 +25,16 @@ public class FragmentUno extends Fragment {
     private String[] juegos;
     private ListView listView;
     private ArrayAdapter adaptadorPs4;
+    private AdaptadorListView adaptadorListView;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         juegos = getResources().getStringArray((R.array.ps4games));
         adaptadorPs4 = new ArrayAdapter(context, android.R.layout.simple_list_item_1, juegos);
+        adaptadorListView = new AdaptadorListView(
+                ,getContext());
+
     }
 
     public FragmentUno() {
@@ -46,7 +53,8 @@ public class FragmentUno extends Fragment {
     public void onResume() {
         super.onResume();
         listView = view.findViewById(R.id.lista_ps4);
-        listView.setAdapter(adaptadorPs4);
+        //listView.setAdapter(adaptadorPs4);
+        listView.setAdapter(adaptadorListView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
