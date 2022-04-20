@@ -32,8 +32,7 @@ public class FragmentUno extends Fragment {
         super.onAttach(context);
         juegos = getResources().getStringArray((R.array.ps4games));
         adaptadorPs4 = new ArrayAdapter(context, android.R.layout.simple_list_item_1, juegos);
-        adaptadorListView = new AdaptadorListView(
-                ,getContext());
+        adaptadorListView = new AdaptadorListView(new ArrayList<>(),getContext());
 
     }
 
