@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio"
+        android:id="@+id/game_menu"
+        ></item>
+
+    <item android:title="Consolas">
+        <menu>
+            <item android:title="PS4"
+                android:icon="@drawable/ps4"
+                android:id="@+id/ps4_menu"
+                ></item>
+            <item android:title="XBOX"
+                android:icon="@drawable/xbox"
+                android:id="@+id/xbox_menu"
+                ></item>
+        </menu>
+    </item>
+
+</menu>
