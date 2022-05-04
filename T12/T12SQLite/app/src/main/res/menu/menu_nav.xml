@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Agregar"
+        android:id="@+id/menu_add"
+        />
+
+    <item android:title="Borrar"
+        android:id="@+id/menu_remove"
+        />
+
+    <item android:title="Listar"
+        android:id="@+id/menu_list"
+        />
+
+</menu>
